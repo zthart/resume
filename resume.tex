@@ -1,0 +1,107 @@
+\documentclass[letter,margin,line]{resume}
+\usepackage[defblank]{paralist}
+\usepackage{pdfpages}
+\usepackage{anysize}
+\usepackage[pdftex, unicode]{hyperref}
+\hypersetup{
+	pdftitle={Zach Hart's Resume},
+	pdfauthor={Zach Hart},
+	pdfborder={0 0 0},
+	% Not sure if this is needed.
+	unicode=true
+}
+\marginsize{0.375in}{1.875in}{0.6in}{0.5in}
+\setdefaultitem{\footnotesize \textbullet}{}{}{}{}{}
+\setdefaultleftmargin{0em}{}{}{}{}{}
+\setdefaultenum{(a)}{(1)}{}{}{}{}
+\newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
+\newcommand{\rdate}[1]{\hfill {\small #1}}
+\renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5} \\*}
+\begin{document}
+\name{\Huge Zach Hart}
+\begin{resume}
+\section{\mysidestyle Contact \\ Information} \vspace{2mm}
+	\begin{asparablank}
+		\item 2109 Becket Drive  \hfill \href{mailto:zthart96@gmail.com}{zthart96@gmail.com}
+		\item Flower Mound, Texas 75028 \hfill (972) 786-5794
+		\item \hfill github.com/zthart
+    \end{asparablank}
+
+\section{\mysidestyle Objective}
+	\begin{asparablank}
+    	\item  \small Seeking a co-op in software engineering for the Spring of 2017 through the Summer of 2017.
+        \normalsize
+        \\
+	\end{asparablank}
+
+\section{\mysidestyle Education}
+	\begin{compactdesc}
+		\item[Rochester Institute of Technology] - Rochester, NY \rdate{August 2015 - Present}
+		\begin{compactitem} { \small
+			\item Major: B.S. Computer Science
+			\item Expected graduation: June 2020
+		} \end{compactitem}
+        \item[Flower Mound High School] - Flower Mound, TX \rdate{August 2011 - June 2015}
+		\begin{compactitem} { \small
+			\item Classes: AP Computer Science (AP Score: 5)
+		} \end{compactitem}
+	\end{compactdesc}
+
+\section{\mysidestyle Projects}
+	\begin{asparablank}
+		\item {\bf Lounge Automation}\rurl{http://github.com/zthart/csh-automation}
+
+		\small A project that aggregates control of consumer devices such as AV Receivers, Projectors, and lighting control and implements X10 Automation, HDMI-CEC, and Serial communications to interface with the devices. The devices are exposed to web requests via a Flask application in order to allow control from any internet enabled device.
+		\normalsize
+		\\	
+        \item {\bf 6502 By Hand}\rurl{}
+        
+        \small An in-progress implementation of the 6502 Microprocessor that allows for the user to input opcodes using hexadecimal rotary selectors tied to the address and data buses of the microprocessor, and will allow for program output via a group of memory-mapped seven-segment displays - Intended to be used as an educational resource for students looking to learn about assembly and digital systems.
+        \normalsize
+        \\
+	\end{asparablank}
+    
+\section{\mysidestyle Technical Skills}
+	\begin{compactdesc}
+		\item[Languages] \begin{inparaenum} { \small
+			Java, Python
+		} \end{inparaenum}
+		\item[Operating Systems] \begin{inparaenum} { \small
+			Linux, Windows
+		} \end{inparaenum}
+        \item[Skills] \begin{inparaenum} { \small
+			6502 Assembly, General Digital Electronics, Hardware Prototyping, Home Automation
+        } \end{inparaenum}
+        \normalsize
+        \\
+	\end{compactdesc}
+
+    
+\section{\mysidestyle Extracurricular}
+	\begin{asparablank}
+		\item {\bf CSH ({\small Computer Science House})}\rurl{http://www.csh.rit.edu/}
+		\small	\item Member \hfill August 2015 - Present
+        \linebreak
+        
+        \small Computer Science House, or CSH, is a group of technically-minded students at the Rochester Institute of Technology that all share a goal of learning and creating through collaboration. Members past and present have been responsible for creating many projects that have seen incredible success at RIT, as well as in the public space.
+	\end{asparablank}
+
+\section{\mysidestyle Experience}
+	\begin{asparadesc}
+		\employer{Sprouts Farmers Market}{Flower Mound, TX}{December 2012 - August 2015}{Produce Clerk}{}
+
+		\small
+		Gained skills in interacting with the general public in a service-oriented position, and learned to interact with co-workers in a environment that demanded co-dependence and cooperation in order to complete necessary tasks. Gained experience in both sales and purchasing, along with customer service and co-worker relations.
+		\normalsize
+		\\
+        
+        \employer{Kroger Co.}{Flower Mound, TX}{August 2012 - December 2012}{Courtesy Clerk}{}
+
+		\small
+		Provided general customer service throughout the sales floor along with management of store resources, along with general sales floor upkeep and maintenance.
+		\normalsize
+		\\
+	\end{asparadesc}
+
+\end{resume}
+\end{document}
