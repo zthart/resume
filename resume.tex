@@ -2,6 +2,8 @@
 \usepackage[defblank]{paralist}
 \usepackage{pdfpages}
 \usepackage{anysize}
+\usepackage{fancyhdr}
+\usepackage{datetime}
 \usepackage[pdftex, unicode]{hyperref}
 \hypersetup{
 	pdftitle={Zachary Hart's Resume},
@@ -18,6 +20,10 @@
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
 \newcommand{\rdate}[1]{\hfill {\small #1}}
 \renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5} \\*}
+\renewcommand{\headrulewidth}{0.0pt} % remove HR added by \pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\footnotesize Updated: \today}
+\pagestyle{fancy}
 \begin{document}
 \name{\Huge Zachary Hart}
 \begin{resume}
@@ -58,25 +64,29 @@
 
 \section{\mysidestyle Projects}
 	\begin{asparablank}
+        \item {\bf Mizu \& Potion Seller } \rurl{https://github.com/zthart/mizu}
+
+        \small A duo of \textbf{RESTful API}s for the web-connected vending machines at RIT's 
+        \textit{Computer Science House}. Written in \textbf{Python}, leveraging the \textbf{Flask} microframework, 
+        the API enables any member to drop drinks having authenticated with internal SSO. Designed and built 
+        alongside a rewrite of the web application.
+        \\
 		\item {\bf Pourover}\rurl{https://github.com/zthart/pourover}
 
-		\small A \textbf{Python} library for parsing and manipulating CEF messages and log files - used in production in an enterprise environment, and available on pypi.
+		\small A \textbf{Python} library for parsing and manipulating CEF messages and log files - used in production in 
+        an enterprise environment, and available on pypi.
 		\normalsize
 		\\
-		\item {\bf CSH Lounge Automation}\rurl{https://github.com/zthart/csh-automation}
-
-		\small Aggregates control of consumer devices such as A/V receivers, projectors, and lighting control and
-        implements \textbf{X10 Automation}, \textbf{HDMI-CEC}, and serial communications to interface with the devices.
-        Exposes a \textbf{RESTful API} leveraging \textbf{Python} and \textbf{Flask} in order to allow control from any internet enabled device.
-		\normalsize
-        \\
 		\item {\bf CSH Compute Cluster}\rurl{https://github.com/zthart/csh-slurmguide}
 
-		\small Setup and Management of a small computing cluster created for members of the Computer Science House at RIT. Allows for users to submit jobs to be run and managed using \textbf{SLURM Workload Manager}.
+		\small Setup and Management of a small computing cluster created for members of the Computer Science House at 
+        RIT. Allows for users to submit jobs to be run and managed using \textbf{SLURM Workload Manager}.
 		\\
 		\item {\bf Huffman Lite}
 
-		\small Written in \textbf{C}, Huffman Lite is a huffman-like encoding and compression algorithm. Utilizing a tree structure similar to a huffman tree, Huffman Lite can encode and decode both human readible files and binary files.
+		\small Written in \textbf{C}, Huffman Lite is a huffman-like encoding and compression algorithm. Utilizing a 
+        tree structure similar to a huffman tree, Huffman Lite can encode and decode both human readable files and 
+        binary files.
 		\normalsize
 	\end{asparablank}
 
