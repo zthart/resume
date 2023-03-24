@@ -19,7 +19,6 @@
 \setdefaultenum{(a)}{(1)}{}{}{}{}
 \newcommand{\rurl}[1]{\hfill {\footnotesize \url{#1}}}
 \newcommand{\rdate}[1]{\hfill {\small #1}}
-\renewcommand{\employer}[5]{\item[#1] - #2 \rdate{#3} \\* #4 \rurl{#5} \\*}
 \renewcommand{\headrulewidth}{0.0pt} % remove HR added by \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[R]{\footnotesize Updated: \today}
@@ -30,13 +29,13 @@
 \begin{resume}
 \section{\mysidestyle Contact Information}
 	\begin{asparablank}
-		\item \href{mailto:zach@zthart.me}{zach@zthart.me} \rurl{https://github.com/zthart}
+		\item \href{mailto:zach@zthart.me}{zach@zthart.me} \rurl{https://zthart.me}
 		\item (972) 786-5794 \rurl{https://linkedin.com/in/zthart}
     	\end{asparablank}
 
 \section{\mysidestyle Objective}
 	\begin{asparablank}
-	\item To improve the material conditions for all through accessible, innovative technology.
+	\item To empower teams in industry to automate and innovate, enabling them to focus on building and not on boilerplate
         \normalsize
 	\end{asparablank}
 
@@ -50,16 +49,17 @@
 	\begin{asparablank}
 
     \item{\bf Okta} - San Francisco, CA \rurl{https://okta.com}
-    \small \item Sr. Software Engineer - Identity Ecosystem \hfill Aug 2021 - Present \\
+    \small \item Sr. Software Engineer - Inbox Platform \rdate{Aug 2021 - Present} \\
 
-    \small A member of the \textbf{atSpoke} team within Okta's Identity Ecosystem engineering org.
-    \small \textbf{Full-stack} engineer working to bring a robust web-based workflow system to Okta's upcoming IGA offering.
-    \small Participated in integration efforts between the atSpoke team and the existing Identity Ecosystem org, as well as growing the team through hiring and onboarding of new engineers.
+    \small A member of the \textbf{Inbox} platform team (\textit{f.k.a. atSpoke}) within Okta's \textbf{Identity Orchestration} engineering org.
+    \small \textbf{Full-stack} engineer working with other internal teams to facilitate adoption of Okta's multi-channel request and notification platform.
+    \small Participated in integration efforts between the atSpoke team and the existing Identity Ecosystem org, as well as growing the team through \textbf{hiring and onboarding} of new engineers.
+	\small Designed and built new platform features as a tech lead, and re-designed existing functionality to peform at scale.
     \normalsize
     \\
     \item{\bf atSpoke} - San Francisco, CA \rurl{https://atspoke.com}
-    \small \item Software Engineer II \hfill February 2021 - August 2021
-    \small \item Software Engineer I \hfill January 2020 - Februrary 2021 \\
+    \small \item Software Engineer II \rdate{February 2021 - August 2021}
+    \small \item Software Engineer I \rdate{January 2020 - Februrary 2021} \\
 
     \small \textbf{Full-stack} engineer developing a \textbf{React} web application with a \textbf{Node.js} backend.
     \small Worked directly on a cross-functional team to complete a migration and redesign of the application's frontend framework from \textbf{Angular} to React.
@@ -68,7 +68,7 @@
     \normalsize
     \\
 	\item{\bf Blackbaud} - Charleston, SC \rurl{https://blackbaud.com}
-	\small \item Software Engineer Intern - Full Stack \hfill May 2019 - August 2019 \\
+	\small \item Software Engineer Intern - Full Stack \rdate{May 2019 - August 2019} \\
 
 	\small A member of the \textbf{Data Intelligence} group, developing applications to better facilitate customer interaction with their data.
 	\small Utilizing \textbf{Angular} and \textbf{.NET Core}, backed by \textbf{Azure} cloud services, migrated existing services to a microservice architecture.
@@ -79,20 +79,44 @@
 
 \section{\mysidestyle Technical Skills}
 	\begin{compactdesc}
-		\item[Languages] \begin{inparaenum} { \small
-			Python, C\#, Java, C, Javascript, Typescript
-		} \end{inparaenum}
-        \item[Frameworks, Libraries, \& Tools] \begin{inparaenum} { \small
-			Flask, Django, Requests, Pytest, SQL, MongoDB, .NET Core, Angular, React, Jest, Mocha, GCP/AWS/Azure Cloud Services (Azure DevOps)
-        } \end{inparaenum}
-		\item[Operating Systems] \begin{inparaenum} { \small
-			Linux (CentOS/RHEL/Fedora, Debian/Ubuntu), Windows, macOS
-		} \end{inparaenum}
+		\item[Languages] \begin{inparablank} { \small
+			\item Javascript,
+			\item Python,
+			\item C\#,
+			\item Java,
+			\item Rust
+		} \end{inparablank}
+        \item[Frameworks, Libraries, \& Tools] \begin{inparablank} { \small
+			\item Express,
+			\item React,
+			\item MongoDB,
+			\item Jest,
+			\item Mocha,
+			\item Flask, 
+			\item Requests, 
+			\item SQL,
+			\item .NET Core
+			\item GCP/AWS/Azure,
+			\item Bash \& Zsh
+        } \end{inparablank}
+		\item[Domain Experience] \begin{inparablank} { \small
+			\item SaaS,
+			\item IDaaS,
+			\item ITSM Tools,
+			\item B2B Software \& Apps
+		} \end{inparablank}
         \normalsize
 	\end{compactdesc}
 
 \section{\mysidestyle Projects}
 	\begin{asparablank}
+		\item {\bf Sprindrift} \rurl{https://github.com/zthart/spindrift}
+
+		\small A simple and performant \textbf{static site generator} written in \textbf{Rust}. 
+		Using YAML-based posts called \textit{droplets} that support markdown-style formatting, and handlebars-like post and index templates, users can frontload boilerplate work and focus on writing posts.
+		Droplets are read and parsed in a \textbf{concurrent and thread safe} process that can parse and convert hundreds of posts in just a few seconds.
+		\normalsize
+		\\
         \item {\bf Mizu \& Potion Seller } \rurl{https://github.com/zthart/mizu}
 
         \small A duo of \textbf{RESTful API}s for the web-connected vending machines at RIT's 
@@ -100,18 +124,6 @@
         the API enables any member to drop drinks having authenticated with internal SSO. Designed and built 
         alongside a rewrite of the web application.
         \\
-		\item {\bf Pourover}\rurl{https://github.com/zthart/pourover}
-
-		\small A \textbf{Python} library for parsing and manipulating CEF messages and log files - used in production in 
-        an enterprise environment, and available on pypi.
-		\normalsize
-		\\
-		\item {\bf Huffman Lite}
-
-		\small Written in \textbf{C}, Huffman Lite is a huffman-like encoding and compression algorithm. Utilizing a 
-        tree structure similar to a huffman tree, Huffman Lite can encode and decode both human readable files and 
-        binary files.
-		\normalsize
 	\end{asparablank}
 
 % \section{\mysidestyle Extracurricular}
